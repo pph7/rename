@@ -44,7 +44,7 @@ void main(List<String> arguments) async {
     };
 
     if (results[appname] != null) {
-      await rename.changeAppName(results[appname], platforms);
+      await rename.changeAppName(results[appname], results[flavor], platforms);
     }
     if (results[bundleId] != null) {
       await rename.changeBundleId(results[bundleId], platforms);
