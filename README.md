@@ -61,6 +61,7 @@ To target a specific platform use the "--target" option. e.g.
         
         -a, --appname         Sets the name of the app.
         -b, --bundleId        Sets the bundle id.
+        -f, --flavor          Sets the flavor of the app.
         -l, --launcherIcon    Sets the launcher icon. (deprecated currently)
         -h, --help            Shows help.
 

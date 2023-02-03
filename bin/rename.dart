@@ -12,6 +12,7 @@ const target = 'target';
 const appname = 'appname';
 const bundleId = 'bundleId';
 const launcherIcon = 'launcherIcon';
+const flavor = 'flavor';
 const help = 'help';
 
 final argParser = ArgParser()
@@ -20,6 +21,7 @@ final argParser = ArgParser()
       allowed: [android, macOS, ios, linux, web, windows],
       help: 'Set which platforms to target.')
   ..addOption(appname, abbr: 'a', help: 'Sets the name of the app.')
+  ..addOption(flavor, abbr: 'f', help: 'Sets the flavor.')
   ..addOption(bundleId, abbr: 'b', help: 'Sets the bundle id.')
   ..addFlag(help, abbr: 'h', help: 'Shows help.', negatable: false);
 

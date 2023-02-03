@@ -219,7 +219,14 @@ class FileRepository {
     return writtenFile;
   }
 
-  Future<File?> changeIosAppName(String? appName) async {
+  Future<File?> changeIosAppName(String? appName, String? flavor) async {
+    if (flavor != null) {
+      // replace filename that follows the patter filename.plist to filename-$flavor.plist
+      iosInfoPlistPath = iosInfoPlistPath!.replaceAll(
+        '.plist',
+        '-$flavor.plist',
+      );
+    }
     List? contentLineByLine = await readFileAsLineByline(
       filePath: iosInfoPlistPath,
     );
